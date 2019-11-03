@@ -1,7 +1,7 @@
 package org.buffer.android.boilerplate.ui.browse
 
-import android.arch.core.executor.testing.InstantTaskExecutorRule
-import android.support.test.runner.AndroidJUnit4
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.nhaarman.mockito_kotlin.any
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.whenever

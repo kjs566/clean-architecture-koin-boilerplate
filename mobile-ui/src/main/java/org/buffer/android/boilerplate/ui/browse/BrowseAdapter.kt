@@ -1,6 +1,6 @@
 package org.buffer.android.boilerplate.ui.browse
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +11,7 @@ import com.bumptech.glide.request.RequestOptions
 import org.buffer.android.boilerplate.data.browse.Bufferoo
 import org.buffer.android.boilerplate.ui.R
 
-class BrowseAdapter : RecyclerView.Adapter<BrowseAdapter.ViewHolder>() {
+class BrowseAdapter : androidx.recyclerview.widget.RecyclerView.Adapter<BrowseAdapter.ViewHolder>() {
 
     var bufferoos: List<Bufferoo> = arrayListOf()
 
@@ -37,7 +37,7 @@ class BrowseAdapter : RecyclerView.Adapter<BrowseAdapter.ViewHolder>() {
         return bufferoos.size
     }
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
         var avatarImage: ImageView
         var nameText: TextView
         var titleText: TextView

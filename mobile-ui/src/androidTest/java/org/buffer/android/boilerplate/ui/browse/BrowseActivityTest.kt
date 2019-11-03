@@ -1,14 +1,14 @@
 package org.buffer.android.boilerplate.ui.browse
 
-import android.support.test.espresso.Espresso.onView
-import android.support.test.espresso.assertion.ViewAssertions.matches
-import android.support.test.espresso.contrib.RecyclerViewActions
-import android.support.test.espresso.matcher.ViewMatchers.hasDescendant
-import android.support.test.espresso.matcher.ViewMatchers.withId
-import android.support.test.espresso.matcher.ViewMatchers.withText
-import android.support.test.rule.ActivityTestRule
-import android.support.test.runner.AndroidJUnit4
-import android.support.v7.widget.RecyclerView
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.contrib.RecyclerViewActions
+import androidx.test.espresso.matcher.ViewMatchers.hasDescendant
+import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withText
+import androidx.test.rule.ActivityTestRule
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.recyclerview.widget.RecyclerView
 import com.nhaarman.mockito_kotlin.whenever
 import io.reactivex.Flowable
 import org.buffer.android.boilerplate.data.browse.Bufferoo
@@ -64,7 +64,7 @@ class BrowseActivityTest: KoinTest {
 
         bufferoos.forEachIndexed { index, bufferoo ->
             onView(withId(R.id.recycler_browse)).perform(RecyclerViewActions.
-                    scrollToPosition<RecyclerView.ViewHolder>(index))
+                    scrollToPosition<androidx.recyclerview.widget.RecyclerView.ViewHolder>(index))
             checkBufferooDetailsDisplay(bufferoo, index) }
     }
 
